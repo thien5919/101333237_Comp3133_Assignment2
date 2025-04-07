@@ -32,6 +32,21 @@
       "linter": "eslint",
       "style": "css",
       "unitTestRunner": "none"
+    },
+    "@nx/angular:component": {
+      "style": "css"
     }
-  }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    }
+  ]
 }

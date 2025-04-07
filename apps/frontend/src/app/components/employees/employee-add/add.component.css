@@ -1,0 +1,61 @@
+.add-container {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #90caf9;
+    cursor: not-allowed;
+  }
+  
+  button[type="button"] {
+    background-color: #eee;
+  }
+  

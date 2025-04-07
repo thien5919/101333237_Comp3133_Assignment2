@@ -1,0 +1,26 @@
+.auth-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .auth-nav button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    background: #eee;
+    cursor: pointer;
+  }
+  
+  .auth-nav button.active-tab {
+    background: #1976d2;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .auth-container {
+    max-width: 400px;
+    margin: auto;
+  }
+  

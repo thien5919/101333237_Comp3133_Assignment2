@@ -1,0 +1,21 @@
+<h1>{{ title }}</h1>
+<h2>Welcome to Employee Manager</h2>
+
+<div class="auth-nav">
+  <button 
+    [ngClass]="{ 'active-tab': selectedTab === 'login' }"
+    (click)="switchTab('login')">
+    Login
+  </button>
+  <button 
+    [ngClass]="{ 'active-tab': selectedTab === 'signup' }"
+    (click)="switchTab('signup')">
+    Sign Up
+  </button>
+</div>
+
+<div class="auth-container">
+  <app-login>LOADING LOGIN</app-login>
+
+  <app-signup *ngIf="selectedTab === 'signup'"></app-signup>
+</div>

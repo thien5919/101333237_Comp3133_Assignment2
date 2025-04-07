@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+
+import { SessionService } from './services/session/session.service';
+import { CommonModule } from '@angular/common';
+
+
 
 @Component({
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [ RouterModule, CommonModule],
+  standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'frontend';
+  constructor(private session: SessionService) {}
+  logout(): void {
+    this.session.logout();
+    localStorage.removeItem('token');
+    window.location.reload(); // force re-render
+  }
+  
+  
 }

@@ -1,0 +1,35 @@
+<div class="add-container">
+    <h2>Add New Employee</h2>
+  
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <label for="name">Full Name</label>
+      <input id="name" formControlName="name" type="text" />
+      <div class="error" *ngIf="employeeForm.get('name')?.invalid && employeeForm.get('name')?.touched">
+        Name is required
+      </div>
+  
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" />
+      <div class="error" *ngIf="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched">
+        Enter a valid email
+      </div>
+  
+      <label for="position">Position</label>
+      <input id="position" formControlName="position" type="text" />
+      <div class="error" *ngIf="employeeForm.get('position')?.invalid && employeeForm.get('position')?.touched">
+        Position is required
+      </div>
+  
+      <label for="department">Department</label>
+      <input id="department" formControlName="department" type="text" />
+      <div class="error" *ngIf="employeeForm.get('department')?.invalid && employeeForm.get('department')?.touched">
+        Department is required
+      </div>
+  
+      <div class="form-buttons">
+        <button type="submit" [disabled]="employeeForm.invalid">Add Employee</button>
+        <button type="button" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  
